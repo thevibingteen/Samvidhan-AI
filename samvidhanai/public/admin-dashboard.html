@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SamvidhanAI</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Government Header Strip -->
+    <div class="govt-strip">
+        <div class="container">
+            <div class="govt-info">
+                <span class="govt-logo"><i class="fas fa-landmark"></i></span>
+                <span class="govt-text">Government of India | Ministry of Law and Justice</span>
+            </div>
+            <div class="govt-links">
+                <span class="admin-badge"><i class="fas fa-shield-alt"></i> Admin Panel</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>SamvidhanAI</span>
+                </div>
+                <button class="sidebar-close" id="sidebarClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#users" class="nav-item" data-section="users">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a>
+                <a href="#lawyers" class="nav-item" data-section="lawyers">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Lawyers</span>
+                </a>
+                <a href="#deletions" class="nav-item" data-section="deletions">
+                    <i class="fas fa-trash-alt"></i>
+                    <span>Deletion Requests</span>
+                </a>
+                <a href="#settings" class="nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar admin">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name">Administrator</span>
+                        <span class="user-role">Super Admin</span>
+                    </div>
+                </div>
+                <button class="btn btn-outline btn-sm" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2 class="page-title">Admin Dashboard</h2>
+                <div class="top-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search..." id="globalSearch">
+                    </div>
+                    <button class="icon-btn" id="notificationBtn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge" id="notificationBadge">0</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Dashboard Overview Section -->
+                <section class="section active" id="dashboard-section">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon users">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="totalUsers">0</span>
+                                <span class="stat-label">Total Users</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon lawyers">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="totalLawyers">0</span>
+                                <span class="stat-label">Verified Lawyers</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon pending">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="pendingLawyers">0</span>
+                                <span class="stat-label">Pending Approvals</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon premium">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="premiumUsers">0</span>
+                                <span class="stat-label">Premium Users</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon deletions">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="deletionRequests">0</span>
+                                <span class="stat-label">Deletion Requests</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon queries">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="totalQueries">0</span>
+                                <span class="stat-label">Total Queries</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Recent Users</h3>
+                                <a href="#users" class="view-all">View All</a>
+                            </div>
+                            <div class="recent-list" id="recentUsersList">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Pending Lawyer Approvals</h3>
+                                <a href="#lawyers" class="view-all">View All</a>
+                            </div>
+                            <div class="recent-list" id="pendingLawyersList">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Users Section -->
+                <section class="section" id="users-section">
+                    <div class="section-header">
+                        <h3>Manage Users</h3>
+                        <div class="header-actions">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search users..." id="userSearch">
+                            </div>
+                            <button class="btn btn-outline" id="exportUsersBtn">
+                                <i class="fas fa-download"></i>
+                                Export
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table" id="usersTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Plan</th>
+                                    <th>Joined</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTableBody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination" id="usersPagination">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Lawyers Section -->
+                <section class="section" id="lawyers-section">
+                    <div class="section-header">
+                        <h3>Manage Lawyers</h3>
+                        <div class="header-actions">
+                            <div class="filter-tabs">
+                                <button class="filter-tab active" data-filter="all">All</button>
+                                <button class="filter-tab" data-filter="pending">Pending</button>
+                                <button class="filter-tab" data-filter="approved">Approved</button>
+                            </div>
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search lawyers..." id="lawyerSearch">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table" id="lawyersTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Bar Council No.</th>
+                                    <th>Status</th>
+                                    <th>Joined</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="lawyersTableBody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Deletion Requests Section -->
+                <section class="section" id="deletions-section">
+                    <div class="section-header">
+                        <h3>Account Deletion Requests</h3>
+                    </div>
+                    <div class="deletion-list" id="deletionList">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section class="section" id="settings-section">
+                    <div class="settings-grid">
+                        <div class="settings-card">
+                            <h4>System Settings</h4>
+                            <form id="systemSettingsForm">
+                                <div class="form-group">
+                                    <label>Site Name</label>
+                                    <input type="text" value="SamvidhanAI" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Maintenance Mode</label>
+                                    <label class="toggle">
+                                        <input type="checkbox" id="maintenanceMode">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>User Registration</label>
+                                    <label class="toggle">
+                                        <input type="checkbox" id="userRegistration" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="settings-card">
+                            <h4>Premium Settings</h4>
+                            <form id="premiumSettingsForm">
+                                <div class="form-group">
+                                    <label>Monthly Price (₹)</label>
+                                    <input type="number" id="monthlyPrice" value="299">
+                                </div>
+                                <div class="form-group">
+                                    <label>Yearly Price (₹)</label>
+                                    <input type="number" id="yearlyPrice" value="2999">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- User Details Modal -->
+    <div class="modal" id="userDetailsModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeUserModal">&times;</button>
+            <div class="modal-header">
+                <h3>User Details</h3>
+            </div>
+            <div class="user-details" id="userDetailsContent">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Lawyer Approval Modal -->
+    <div class="modal" id="lawyerApprovalModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeApprovalModal">&times;</button>
+            <div class="modal-header">
+                <h3>Lawyer Approval</h3>
+            </div>
+            <div class="lawyer-details" id="lawyerDetailsContent">
+                <!-- Populated by JS -->
+            </div>
+            <div class="approval-actions">
+                <button class="btn btn-danger" id="rejectLawyerBtn">
+                    <i class="fas fa-times"></i>
+                    Reject
+                </button>
+                <button class="btn btn-success" id="approveLawyerBtn">
+                    <i class="fas fa-check"></i>
+                    Approve
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer">
+        <div class="toast" id="toast">
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

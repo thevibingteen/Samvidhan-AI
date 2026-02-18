@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamvidhanAI - Origin Midnight | AI-Powered Legal Assistance</title>
+    <meta name="description" content="India's Sovereign AI Legal Assistant - Get instant legal guidance powered by AI trained on Indian case law">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Government Header Strip -->
+    <div class="govt-strip">
+        <div class="container">
+            <div class="govt-info">
+                <span class="govt-logo"><i class="fas fa-landmark"></i></span>
+                <span class="govt-text" data-en="Government of India | Ministry of Law and Justice" data-hi="भारत सरकार | विधि और न्याय मंत्रालय">Government of India | Ministry of Law and Justice</span>
+            </div>
+            <div class="govt-links">
+                <a href="#main-content" class="skip-link" data-en="Skip to main content" data-hi="मुख्य सामग्री पर जाएं">Skip to main content</a>
+                <div class="language-toggle">
+                    <button id="lang-en" class="lang-btn active">English</button>
+                    <button id="lang-hi" class="lang-btn">हिन्दी</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>SamvidhanAI</h1>
+                    <span class="tagline" data-en="Origin Midnight" data-hi="ओरिजिन मिडनाइट">Origin Midnight</span>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-en="Home" data-hi="होम">Home</a></li>
+                <li><a href="#features" class="nav-link" data-en="Features" data-hi="विशेषताएं">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link" data-en="How It Works" data-hi="यह कैसे काम करता है">How It Works</a></li>
+                <li><a href="#pricing" class="nav-link" data-en="Pricing" data-hi="मूल्य निर्धारण">Pricing</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-hi="परिचय">About</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-hi="संपर्क">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-outline" id="loginBtn" data-en="Login" data-hi="लॉग इन">Login</button>
+                <button class="btn btn-primary" id="signupBtn" data-en="Get Started" data-hi="शुरू करें">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" tabindex="-1">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <div class="hero-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span data-en="Sovereign AI for Bharat" data-hi="भारत के लिए संप्रभु AI">Sovereign AI for Bharat</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span data-en="Your Constitutional" data-hi="आपका संवैधानिक">Your Constitutional</span>
+                        <span class="highlight" data-en="Legal Companion" data-hi="कानूनी साथी">Legal Companion</span>
+                    </h1>
+                    <p class="hero-description" data-en="Access instant legal guidance powered by AI trained on Indian Constitution, IPC, CrPC, and Supreme Court judgments. Available in English and Hindi." data-hi="भारतीय संविधान, IPC, CrPC और सुप्रीम कोर्ट के निर्णयों पर प्रशिक्षित AI द्वारा संचालित त्वरित कानूनी मार्गदर्शन प्राप्त करें। अंग्रेजी और हिंदी में उपलब्ध।">
+                        Access instant legal guidance powered by AI trained on Indian Constitution, IPC, CrPC, and Supreme Court judgments. Available in English and Hindi.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10M+</span>
+                            <span class="stat-label" data-en="Legal Queries" data-hi="कानूनी प्रश्न">Legal Queries</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label" data-en="Case Laws" data-hi="मुकदमा कानून">Case Laws</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">22</span>
+                            <span class="stat-label" data-en="Languages" data-hi="भाषाएं">Languages</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" id="heroSignupBtn">
+                            <i class="fas fa-rocket"></i>
+                            <span data-en="Start Free Consultation" data-hi="मुफ्त परामर्श शुरू करें">Start Free Consultation</span>
+                        </button>
+                        <button class="btn btn-outline btn-lg" id="learnMoreBtn">
+                            <i class="fas fa-play-circle"></i>
+                            <span data-en="Watch Demo" data-hi="डेमो देखें">Watch Demo</span>
+                        </button>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-text" data-en="Trusted by" data-hi="द्वारा विश्वसनीय">Trusted by</span>
+                        <div class="trust-logos">
+                            <span><i class="fas fa-university"></i> DoJ</span>
+                            <span><i class="fas fa-gavel"></i> BCI</span>
+                            <span><i class="fas fa-building"></i> NALSA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-orb">
+                        <div class="orb-core"></div>
+                        <div class="orb-ring ring-1"></div>
+                        <div class="orb-ring ring-2"></div>
+                        <div class="orb-ring ring-3"></div>
+                        <div class="orb-particles"></div>
+                    </div>
+                    <div class="floating-cards">
+                        <div class="float-card card-1">
+                            <i class="fas fa-file-contract"></i>
+                            <span data-en="Contract Review" data-hi="अनुबंध समीक्षा">Contract Review</span>
+                        </div>
+                        <div class="float-card card-2">
+                            <i class="fas fa-user-shield"></i>
+                            <span data-en="Rights Guide" data-hi="अधिकार मार्गदर्शिका">Rights Guide</span>
+                        </div>
+                        <div class="float-card card-3">
+                            <i class="fas fa-balance-scale-right"></i>
+                            <span data-en="Case Analysis" data-hi="मामला विश्लेषण">Case Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-wave">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="var(--bg-primary)"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge" data-en="Features" data-hi="विशेषताएं">Features</span>
+                    <h2 class="section-title" data-en="Comprehensive Legal AI Platform" data-hi="व्यापक कानूनी AI प्लेटफॉर्म">Comprehensive Legal AI Platform</h2>
+                    <p class="section-description" data-en="Everything you need for legal assistance, powered by sovereign AI technology" data-hi="कानूनी सहायता के लिए आपको जो कुछ भी चाहिए, संप्रभु AI तकनीक द्वारा संचालित">Everything you need for legal assistance, powered by sovereign AI technology</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 data-en="Text Consultation" data-hi="पाठ परामर्श">Text Consultation</h3>
+                        <p data-en="Type your legal queries and get instant AI-powered responses with relevant case citations and constitutional references." data-hi="अपने कानूनी प्रश्न टाइप करें और प्रासंगिक मामला उद्धरणों और संवैधानिक संदर्भों के साथ त्वरित AI-संचालित प्रतिक्रियाएं प्राप्त करें।">Type your legal queries and get instant AI-powered responses with relevant case citations and constitutional references.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3 data-en="Voice Assistance" data-hi="आवाज सहायता">Voice Assistance</h3>
+                        <p data-en="Speak your legal questions in Hindi or English. Our AI understands natural language and provides spoken responses." data-hi="हिंदी या अंग्रेजी में अपने कानूनी प्रश्न बोलें। हमारा AI प्राकृतिक भाषा को समझता है और बोले गए उत्तर प्रदान करता है।">Speak your legal questions in Hindi or English. Our AI understands natural language and provides spoken responses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 data-en="Visual Document Analysis" data-hi="दृश्य दस्तावेज़ विश्लेषण">Visual Document Analysis</h3>
+                        <p data-en="Upload legal documents, notices, or court papers. Our AI analyzes and explains the content in simple language." data-hi="कानूनी दस्तावेज़, नोटिस या अदालती कागजात अपलोड करें। हमारा AI सरल भाषा में सामग्री का विश्लेषण और व्याख्या करता है।">Upload legal documents, notices, or court papers. Our AI analyzes and explains the content in simple language.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 data-en="Connect with Lawyers" data-hi="वकीलों से जुड़ें">Connect with Lawyers</h3>
+                        <p data-en="Premium users can connect with verified lawyers for detailed consultation and case representation." data-hi="प्रीमियम उपयोगकर्ता विस्तृत परामर्श और मामला प्रतिनिधित्व के लिए सत्यापित वकीलों से जुड़ सकते हैं।">Premium users can connect with verified lawyers for detailed consultation and case representation.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3 data-en="Chat History" data-hi="चैट इतिहास">Chat History</h3>
+                        <p data-en="Access your complete consultation history anytime. Review past queries and AI responses for future reference." data-hi="कभी भी अपने पूर्ण परामर्श इतिहास तक पहुंचें। भविष्य के संदर्भ के लिए पिछले प्रश्नों और AI प्रतिक्रियाओं की समीक्षा करें।">Access your complete consultation history anytime. Review past queries and AI responses for future reference.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 data-en="Data Sovereignty" data-hi="डेटा संप्रभुता">Data Sovereignty</h3>
+                        <p data-en="Your data stays in India. Our AI models are hosted on Indian servers, ensuring complete data privacy and security." data-hi="आपका डेटा भारत में रहता है। हमारे AI मॉडल भारतीय सर्वर पर होस्ट किए गए हैं, जो पूर्ण डेटा गोपनीयता और सुरक्षा सुनिश्चित करते हैं।">Your data stays in India. Our AI models are hosted on Indian servers, ensuring complete data privacy and security.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge" data-en="Process" data-hi="प्रक्रिया">Process</span>
+                    <h2 class="section-title" data-en="How SamvidhanAI Works" data-hi="सम्विधानAI कैसे काम करता है">How SamvidhanAI Works</h2>
+                    <p class="section-description" data-en="Get legal assistance in four simple steps" data-hi="चार सरल चरणों में कानूनी सहायता प्राप्त करें">Get legal assistance in four simple steps</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <h3 data-en="Create Account" data-hi="खाता बनाएं">Create Account</h3>
+                            <p data-en="Sign up with your email and phone. Verify with OTP for secure access." data-hi="अपने ईमेल और फोन के साथ साइन अप करें। सुरक्षित पहुंच के लिए OTP से सत्यापित करें।">Sign up with your email and phone. Verify with OTP for secure access.</p>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3 data-en="Give Consent" data-hi="सहमति दें">Give Consent</h3>
+                            <p data-en="Review and accept our terms of service and privacy policy for AI consultation." data-hi="AI परामर्श के लिए हमारी सेवा की शर्तों और गोपनीयता नीति की समीक्षा और स्वीकृति दें।">Review and accept our terms of service and privacy policy for AI consultation.</p>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 data-en="Ask Your Query" data-hi="अपना प्रश्न पूछें">Ask Your Query</h3>
+                            <p data-en="Type, speak, or upload documents. Our AI analyzes and provides detailed guidance." data-hi="टाइप करें, बोलें या दस्तावेज़ अपलोड करें। हमारा AI विश्लेषण करता है और विस्तृत मार्गदर्शन प्रदान करता है।">Type, speak, or upload documents. Our AI analyzes and provides detailed guidance.</p>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 data-en="Upgrade for More" data-hi="अधिक के लिए अपग्रेड करें">Upgrade for More</h3>
+                            <p data-en="Go premium for detailed insights, case citations, and lawyer connections." data-hi="विस्तृत अंतर्दृष्टि, मामला उद्धरण और वकील कनेक्शन के लिए प्रीमियम जाएं।">Go premium for detailed insights, case citations, and lawyer connections.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge" data-en="Pricing" data-hi="मूल्य निर्धारण">Pricing</span>
+                    <h2 class="section-title" data-en="Choose Your Plan" data-hi="अपनी योजना चुनें">Choose Your Plan</h2>
+                    <p class="section-description" data-en="Flexible plans for every legal need" data-hi="हर कानूनी आवश्यकता के लिए लचीली योजनाएं">Flexible plans for every legal need</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 data-en="Free" data-hi="मुफ्त">Free</h3>
+                            <div class="pricing-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">0</span>
+                                <span class="period" data-en="/month" data-hi="/माह">/month</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Basic legal queries" data-hi="बुनियादी कानूनी प्रश्न">Basic legal queries</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="General AI responses" data-hi="सामान्य AI प्रतिक्रियाएं">General AI responses</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Text consultation" data-hi="पाठ परामर्श">Text consultation</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Chat history (7 days)" data-hi="चैट इतिहास (7 दिन)">Chat history (7 days)</span></li>
+                            <li class="disabled"><i class="fas fa-times"></i> <span data-en="No case citations" data-hi="कोई मामला उद्धरण नहीं">No case citations</span></li>
+                            <li class="disabled"><i class="fas fa-times"></i> <span data-en="Advertisements shown" data-hi="विज्ञापन दिखाए जाते हैं">Advertisements shown</span></li>
+                        </ul>
+                        <button class="btn btn-outline btn-block" data-en="Get Started" data-hi="शुरू करें">Get Started</button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge" data-en="Most Popular" data-hi="सबसे लोकप्रिय">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3 data-en="Premium" data-hi="प्रीमियम">Premium</h3>
+                            <div class="pricing-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">299</span>
+                                <span class="period" data-en="/month" data-hi="/माह">/month</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Unlimited queries" data-hi="असीमित प्रश्न">Unlimited queries</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Detailed AI responses" data-hi="विस्तृत AI प्रतिक्रियाएं">Detailed AI responses</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="All consultation modes" data-hi="सभी परामर्श मोड">All consultation modes</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Unlimited chat history" data-hi="असीमित चैट इतिहास">Unlimited chat history</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Case law citations" data-hi="मामला कानून उद्धरण">Case law citations</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Connect with lawyers" data-hi="वकीलों से जुड़ें">Connect with lawyers</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Ad-free experience" data-hi="विज्ञापन-मुक्त अनुभव">Ad-free experience</span></li>
+                        </ul>
+                        <button class="btn btn-primary btn-block" data-en="Upgrade Now" data-hi="अभी अपग्रेड करें">Upgrade Now</button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 data-en="B2B" data-hi="वकील">B2B</h3>
+                            <div class="pricing-price">
+                                <span class="currency">₹</span>
+                                <span class="amount">999</span>
+                                <span class="period" data-en="/month" data-hi="/माह">/month</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Premium features" data-hi="प्रीमियम विशेषताएं">Premium features</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Verified lawyer badge" data-hi="सत्यापित वकील बैज">Verified lawyer badge</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Client connections" data-hi="ग्राहक कनेक्शन">Client connections</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Priority support" data-hi="प्राथमिकता समर्थन">Priority support</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Profile visibility" data-hi="प्रोफाइल दृश्यता">Profile visibility</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Case management tools" data-hi="मामला प्रबंधन उपकरण">Case management tools</span></li>
+                        </ul>
+                        <button class="btn btn-outline btn-block" data-en="Register as Lawyer" data-hi="वकील के रूप में पंजीकरण करें">Register as Lawyer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <span class="section-badge" data-en="About Us" data-hi="हमारे बारे में">About Us</span>
+                        <h2 class="section-title" data-en="Sovereign AI for India's Legal Future" data-hi="भारत के कानूनी भविष्य के लिए संप्रभु AI">Sovereign AI for India's Legal Future</h2>
+                        <p data-en="SamvidhanAI is India's first sovereign AI legal assistant, developed under the Digital India initiative. Our mission is to make legal knowledge accessible to every citizen, regardless of their background or location." data-hi="सम्विधानAI भारत का पहला संप्रभु AI कानूनी सहायक है, जो डिजिटल इंडिया पहल के तहत विकसित किया गया है। हमारा मिशन हर नागरिक के लिए कानूनी ज्ञान सुलभ बनाना है, चाहे उनकी पृष्ठभूमि या स्थान कुछ भी हो।">
+                            SamvidhanAI is India's first sovereign AI legal assistant, developed under the Digital India initiative. Our mission is to make legal knowledge accessible to every citizen, regardless of their background or location.
+                        </p>
+                        <p data-en="Powered by Bharat Gen AI Legal Param, our models are trained exclusively on Indian legal corpus including the Constitution, IPC, CrPC, and over 50,000 Supreme Court judgments." data-hi="भारत जेन AI लीगल पैराम द्वारा संचालित, हमारे मॉडल विशेष रूप से भारतीय कानूनी कॉर्पस पर प्रशिक्षित हैं जिसमें संविधान, IPC, CrPC और 50,000 से अधिक सुप्रीम कोर्ट के निर्णय शामिल हैं।">
+                            Powered by Bharat Gen AI Legal Param, our models are trained exclusively on Indian legal corpus including the Constitution, IPC, CrPC, and over 50,000 Supreme Court judgments.
+                        </p>
+                        <div class="about-stats">
+                            <div class="about-stat">
+                                <span class="stat-value">99.9%</span>
+                                <span class="stat-label" data-en="Uptime" data-hi="अपटाइम">Uptime</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="stat-value">&lt;2s</span>
+                                <span class="stat-label" data-en="Response Time" data-hi="प्रतिक्रिया समय">Response Time</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label" data-en="Data in India" data-hi="डेटा भारत में">Data in India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="about-map">
+                            <div class="india-outline">
+                                <svg viewBox="0 0 200 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M100 10L120 30L140 25L160 40L150 60L170 80L165 100L175 120L160 140L165 160L150 180L140 200L120 220L100 240L80 220L60 200L50 180L35 160L40 140L25 120L35 100L30 80L50 60L40 40L60 25L80 30L100 10Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                                <div class="map-nodes">
+                                    <div class="node node-1"></div>
+                                    <div class="node node-2"></div>
+                                    <div class="node node-3"></div>
+                                    <div class="node node-4"></div>
+                                    <div class="node node-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge" data-en="Testimonials" data-hi="प्रशंसापत्र">Testimonials</span>
+                    <h2 class="section-title" data-en="What Our Users Say" data-hi="हमारे उपयोगकर्ता क्या कहते हैं">What Our Users Say</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-en="SamvidhanAI helped me understand my tenant rights within minutes. The AI response was accurate and cited relevant sections of the law." data-hi="सम्विधानAI ने मुझे कुछ ही मिनटों में मेरे किरायेदार अधिकारों को समझने में मदद की। AI प्रतिक्रिया सटीक थी और कानून के प्रासंगिक खंडों का उद्धरण दिया।">
+                            SamvidhanAI helped me understand my tenant rights within minutes. The AI response was accurate and cited relevant sections of the law.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RK</div>
+                            <div class="author-info">
+                                <span class="author-name">Rahul Kumar</span>
+                                <span class="author-title" data-en="Business Owner, Delhi" data-hi="व्यवसाय मालिक, दिल्ली">Business Owner, Delhi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-en="As a lawyer, I use SamvidhanAI to quickly reference case laws. The premium features are worth every rupee for the time saved." data-hi="वकील के रूप में, मैं मामला कानूनों का त्वरित संदर्भ के लिए सम्विधानAI का उपयोग करता हूं। प्रीमियम विशेषताएं बचाए गए समय के लिए हर रुपया worth हैं।">
+                            As a lawyer, I use SamvidhanAI to quickly reference case laws. The premium features are worth every rupee for the time saved.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AP</div>
+                            <div class="author-info">
+                                <span class="author-name">Adv. Priya Sharma</span>
+                                <span class="author-title" data-en="High Court Lawyer" data-hi="हाई कोर्ट वकील">High Court Lawyer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text" data-en="The voice feature in Hindi is a game-changer for my parents who are not comfortable with English or typing." data-hi="हिंदी में आवाज़ सुविधा मेरे माता-पिता के लिए एक गेम-चेंजर है जो अंग्रेजी या टाइपिंग के साथ सहज नहीं हैं।">
+                            The voice feature in Hindi is a game-changer for my parents who are not comfortable with English or typing.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <span class="author-name">Suresh Mishra</span>
+                                <span class="author-title" data-en="Teacher, Varanasi" data-hi="शिक्षक, वाराणसी">Teacher, Varanasi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge" data-en="Contact" data-hi="संपर्क">Contact</span>
+                    <h2 class="section-title" data-en="Get in Touch" data-hi="संपर्क करें">Get in Touch</h2>
+                    <p class="section-description" data-en="Have questions? We're here to help" data-hi="प्रश्न हैं? हम मदद के लिए यहां हैं">Have questions? We're here to help</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 data-en="Email" data-hi="ईमेल">Email</h3>
+                            <p>support@samvidhanai.gov.in</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3 data-en="Helpline" data-hi="हेल्पलाइन">Helpline</h3>
+                            <p>1800-XXX-XXXX (Toll Free)</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 data-en="Address" data-hi="पता">Address</h3>
+                            <p data-en="Ministry of Law and Justice, Shastri Bhawan, New Delhi - 110001" data-hi="विधि और न्याय मंत्रालय, शास्त्री भवन, नई दिल्ली - 110001">Ministry of Law and Justice, Shastri Bhawan, New Delhi - 110001</p>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName" data-en="Name" data-hi="नाम">Name</label>
+                                    <input type="text" id="contactName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail" data-en="Email" data-hi="ईमेल">Email</label>
+                                    <input type="email" id="contactEmail" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject" data-en="Subject" data-hi="विषय">Subject</label>
+                                <input type="text" id="contactSubject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage" data-en="Message" data-hi="संदेश">Message</label>
+                                <textarea id="contactMessage" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i>
+                                <span data-en="Send Message" data-hi="संदेश भेजें">Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="brand-logo">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>SamvidhanAI</h3>
+                        <p data-en="India's Sovereign AI Legal Assistant - Making justice accessible to all citizens." data-hi="भारत का संप्रभु AI कानूनी सहायक - सभी नागरिकों के लिए न्याय सुलभ बनाना।">
+                            India's Sovereign AI Legal Assistant - Making justice accessible to all citizens.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h4>
+                        <ul>
+                            <li><a href="#home" data-en="Home" data-hi="होम">Home</a></li>
+                            <li><a href="#features" data-en="Features" data-hi="विशेषताएं">Features</a></li>
+                            <li><a href="#pricing" data-en="Pricing" data-hi="मूल्य निर्धारण">Pricing</a></li>
+                            <li><a href="#about" data-en="About" data-hi="परिचय">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-en="Legal" data-hi="कानूनी">Legal</h4>
+                        <ul>
+                            <li><a href="#" data-en="Terms of Service" data-hi="सेवा की शर्तें">Terms of Service</a></li>
+                            <li><a href="#" data-en="Privacy Policy" data-hi="गोपनीयता नीति">Privacy Policy</a></li>
+                            <li><a href="#" data-en="Disclaimer" data-hi="अस्वीकरण">Disclaimer</a></li>
+                            <li><a href="#" data-en="Cookie Policy" data-hi="कुकी नीति">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4 data-en="Resources" data-hi="संसाधन">Resources</h4>
+                        <ul>
+                            <li><a href="#" data-en="Help Center" data-hi="सहायता केंद्र">Help Center</a></li>
+                            <li><a href="#" data-en="API Documentation" data-hi="API दस्तावेज़ीकरण">API Documentation</a></li>
+                            <li><a href="#" data-en="Blog" data-hi="ब्लॉग">Blog</a></li>
+                            <li><a href="#" data-en="Status" data-hi="स्थिति">Status</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p data-en="© 2025 SamvidhanAI - Origin Midnight. All rights reserved." data-hi="© 2025 सम्विधानAI - ओरिजिन मिडनाइट। सर्वाधिकार सुरक्षित।">
+                    © 2025 SamvidhanAI - Origin Midnight. All rights reserved.
+                </p>
+                <p class="govt-tag" data-en="An initiative under Digital India | Ministry of Law and Justice, Government of India" data-hi="डिजिटल इंडिया के तहत एक पहल | विधि और न्याय मंत्रालय, भारत सरकार">
+                    An initiative under Digital India | Ministry of Law and Justice, Government of India
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeLoginModal">&times;</button>
+            <div class="modal-header">
+                <h2 data-en="Welcome Back" data-hi="वापसी पर स्वागत">Welcome Back</h2>
+                <p data-en="Login to access your legal assistant" data-hi="अपने कानूनी सहायक तक पहुंचने के लिए लॉगिन करें">Login to access your legal assistant</p>
+            </div>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="user-login" data-en="User" data-hi="उपयोगकर्ता">User</button>
+                <button class="tab-btn" data-tab="lawyer-login" data-en="Lawyer" data-hi="वकील">Lawyer</button>
+                <button class="tab-btn" data-tab="admin-login" data-en="Admin" data-hi="एडमिन">Admin</button>
+            </div>
+            <div class="tab-content active" id="user-login-form">
+                <form id="userLoginForm">
+                    <div class="form-group">
+                        <label for="user-login-email" data-en="Email" data-hi="ईमेल">Email</label>
+                        <input type="email" id="user-login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-login-password" data-en="Password" data-hi="पासवर्ड">Password</label>
+                        <input type="password" id="user-login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span data-en="Login" data-hi="लॉग इन">Login</span>
+                    </button>
+                </form>
+                <div class="form-footer">
+                    <a href="#" id="forgotPasswordLink" data-en="Forgot Password?" data-hi="पासवर्ड भूल गए?">Forgot Password?</a>
+                    <p data-en="Don't have an account?" data-hi="खाता नहीं है?">Don't have an account? <a href="#" id="show-signup" data-en="Sign up" data-hi="साइन अप">Sign up</a></p>
+                </div>
+            </div>
+            <div class="tab-content" id="lawyer-login-form">
+                <form id="lawyerLoginForm">
+                    <div class="form-group">
+                        <label for="lawyer-login-email" data-en="Email" data-hi="ईमेल">Email</label>
+                        <input type="email" id="lawyer-login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-login-password" data-en="Password" data-hi="पासवर्ड">Password</label>
+                        <input type="password" id="lawyer-login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span data-en="Login" data-hi="लॉग इन">Login</span>
+                    </button>
+                </form>
+            </div>
+            <div class="tab-content" id="admin-login-form">
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="admin-username" data-en="Username" data-hi="उपयोगकर्ता नाम">Username</label>
+                        <input type="text" id="admin-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-password" data-en="Password" data-hi="पासवर्ड">Password</label>
+                        <input type="password" id="admin-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span data-en="Login" data-hi="लॉग इन">Login</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeSignupModal">&times;</button>
+            <div class="modal-header">
+                <h2 data-en="Create Account" data-hi="खाता बनाएं">Create Account</h2>
+                <p data-en="Join India's sovereign legal AI platform" data-hi="भारत के संप्रभु कानूनी AI प्लेटफॉर्म से जुड़ें">Join India's sovereign legal AI platform</p>
+            </div>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="user-signup" data-en="User" data-hi="उपयोगकर्ता">User</button>
+                <button class="tab-btn" data-tab="lawyer-signup" data-en="Lawyer" data-hi="वकील">Lawyer</button>
+            </div>
+            <div class="tab-content active" id="user-signup-form">
+                <form id="userSignupForm">
+                    <div class="form-group">
+                        <label for="user-signup-name" data-en="Full Name" data-hi="पूरा नाम">Full Name</label>
+                        <input type="text" id="user-signup-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-signup-email" data-en="Email" data-hi="ईमेल">Email</label>
+                        <input type="email" id="user-signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-signup-phone" data-en="Phone Number" data-hi="फोन नंबर">Phone Number</label>
+                        <input type="tel" id="user-signup-phone" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-signup-password" data-en="Password" data-hi="पासवर्ड">Password</label>
+                        <input type="password" id="user-signup-password" minlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-signup-confirm" data-en="Confirm Password" data-hi="पासवर्ड पुष्टि करें">Confirm Password</label>
+                        <input type="password" id="user-signup-confirm" minlength="6" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-user-plus"></i>
+                        <span data-en="Create Account" data-hi="खाता बनाएं">Create Account</span>
+                    </button>
+                </form>
+                <div class="form-footer">
+                    <p data-en="Already have an account?" data-hi="पहले से ही खाता है?">Already have an account? <a href="#" id="show-login" data-en="Login" data-hi="लॉग इन">Login</a></p>
+                </div>
+            </div>
+            <div class="tab-content" id="lawyer-signup-form">
+                <form id="lawyerSignupForm">
+                    <div class="form-group">
+                        <label for="lawyer-signup-name" data-en="Full Name" data-hi="पूरा नाम">Full Name</label>
+                        <input type="text" id="lawyer-signup-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-email" data-en="Email" data-hi="ईमेल">Email</label>
+                        <input type="email" id="lawyer-signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-phone" data-en="Phone Number" data-hi="फोन नंबर">Phone Number</label>
+                        <input type="tel" id="lawyer-signup-phone" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-bar" data-en="Bar Council Number" data-hi="बार काउंसिल नंबर">Bar Council Number</label>
+                        <input type="text" id="lawyer-signup-bar" required>
+                    </div>
+                    <!-- ADDED AADHAAR FIELD -->
+                    <div class="form-group">
+                        <label for="lawyer-signup-aadhaar" data-en="Aadhaar Number" data-hi="आधार नंबर">Aadhaar Number</label>
+                        <input type="text" id="lawyer-signup-aadhaar" pattern="[0-9]{12}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-specialization" data-en="Specialization (comma separated)" data-hi="विशेषज्ञता (अल्पविराम से अलग)">Specialization (comma separated)</label>
+                        <input type="text" id="lawyer-signup-specialization">
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-experience" data-en="Years of Experience" data-hi="अनुभव के वर्ष">Years of Experience</label>
+                        <input type="number" id="lawyer-signup-experience">
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-court" data-en="Court Jurisdiction" data-hi="अदालत क्षेत्राधिकार">Court Jurisdiction</label>
+                        <input type="text" id="lawyer-signup-court">
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-address" data-en="Address" data-hi="पता">Address</label>
+                        <textarea id="lawyer-signup-address" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-bio" data-en="Bio" data-hi="जीवनी">Bio</label>
+                        <textarea id="lawyer-signup-bio" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-password" data-en="Password" data-hi="पासवर्ड">Password</label>
+                        <input type="password" id="lawyer-signup-password" minlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lawyer-signup-confirm" data-en="Confirm Password" data-hi="पासवर्ड पुष्टि करें">Confirm Password</label>
+                        <input type="password" id="lawyer-signup-confirm" minlength="6" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-user-plus"></i>
+                        <span data-en="Register as Lawyer" data-hi="वकील के रूप में पंजीकरण करें">Register as Lawyer</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- OTP Modal -->
+    <div class="modal" id="otpModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeOtpModal">&times;</button>
+            <div class="modal-header">
+                <h2 data-en="Verify Your Identity" data-hi="अपनी पहचान सत्यापित करें">Verify Your Identity</h2>
+                <p data-en="Enter the OTP sent to your email and phone" data-hi="अपने ईमेल और फोन पर भेजा गया OTP दर्ज करें">Enter the OTP sent to your email and phone</p>
+            </div>
+            <form id="otpForm">
+                <div class="form-group">
+                    <label for="email-otp" data-en="Email OTP" data-hi="ईमेल OTP">Email OTP</label>
+                    <input type="text" id="email-otp" maxlength="6" placeholder="123456" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-otp" data-en="Phone OTP" data-hi="फोन OTP">Phone OTP</label>
+                    <input type="text" id="phone-otp" maxlength="6" placeholder="123456" required>
+                </div>
+                <div class="otp-info">
+                    <p><i class="fas fa-info-circle"></i> <span data-en="For demo, use OTP: " data-hi="डेमो के लिए, OTP का उपयोग करें: ">For demo, use OTP: </span><strong>123456</strong></p>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-check-circle"></i>
+                    <span data-en="Verify" data-hi="सत्यापित करें">Verify</span>
+                </button>
+            </form>
+            <div class="form-footer">
+                <p data-en="Didn't receive OTP?" data-hi="OTP नहीं मिला?">Didn't receive OTP? <a href="#" id="resendOtp" data-en="Resend" data-hi="पुनः भेजें">Resend</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal" id="forgotPasswordModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeForgotModal">&times;</button>
+            <div class="modal-header">
+                <h2 data-en="Forgot Password" data-hi="पासवर्ड भूल गए">Forgot Password</h2>
+                <p data-en="Enter your email to receive OTP" data-hi="OTP प्राप्त करने के लिए अपना ईमेल दर्ज करें">Enter your email to receive OTP</p>
+            </div>
+            <form id="forgotPasswordForm">
+                <div class="form-group">
+                    <label for="forgot-email" data-en="Email" data-hi="ईमेल">Email</label>
+                    <input type="email" id="forgot-email" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-paper-plane"></i>
+                    <span data-en="Send OTP" data-hi="OTP भेजें">Send OTP</span>
+                </button>
+            </form>
+            <div class="form-footer">
+                <p data-en="Remember your password?" data-hi="पासवर्ड याद है?">Remember your password? <a href="#" id="back-to-login">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reset Password Modal -->
+    <div class="modal" id="resetPasswordModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeResetModal">&times;</button>
+            <div class="modal-header">
+                <h2 data-en="Reset Password" data-hi="पासवर्ड रीसेट">Reset Password</h2>
+                <p data-en="Enter OTP and new password" data-hi="OTP और नया पासवर्ड दर्ज करें">Enter OTP and new password</p>
+            </div>
+            <form id="resetPasswordForm">
+                <input type="hidden" id="reset-email">
+                <div class="form-group">
+                    <label for="reset-otp" data-en="OTP" data-hi="OTP">OTP</label>
+                    <input type="text" id="reset-otp" maxlength="6" required>
+                </div>
+                <div class="form-group">
+                    <label for="reset-new-password" data-en="New Password" data-hi="नया पासवर्ड">New Password</label>
+                    <input type="password" id="reset-new-password" minlength="6" required>
+                </div>
+                <div class="form-group">
+                    <label for="reset-confirm-password" data-en="Confirm Password" data-hi="पासवर्ड पुष्टि करें">Confirm Password</label>
+                    <input type="password" id="reset-confirm-password" minlength="6" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-key"></i>
+                    <span data-en="Reset Password" data-hi="पासवर्ड रीसेट">Reset Password</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Consent Modal -->
+    <div class="modal" id="consentModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-lg">
+            <button class="modal-close" id="closeConsentModal">&times;</button>
+            <div class="modal-header">
+                <h2 data-en="Terms of Service & Consent" data-hi="सेवा की शर्तें और सहमति">Terms of Service & Consent</h2>
+            </div>
+            <div class="consent-content">
+                <div class="consent-section">
+                    <h3 data-en="AI Legal Assistant Disclaimer" data-hi="AI कानूनी सहायक अस्वीकरण">AI Legal Assistant Disclaimer</h3>
+                    <p data-en="SamvidhanAI provides general legal information and guidance based on Indian law. The AI responses are for informational purposes only and do not constitute legal advice." data-hi="सम्विधानAI भारतीय कानून के आधार पर सामान्य कानूनी जानकारी और मार्गदर्शन प्रदान करता है। AI प्रतिक्रियाएं केवल सूचनात्मक उद्देश्यों के लिए हैं और कानूनी सलाह का गठन नहीं करती हैं।">
+                        SamvidhanAI provides general legal information and guidance based on Indian law. The AI responses are for informational purposes only and do not constitute legal advice.
+                    </p>
+                </div>
+                <div class="consent-section">
+                    <h3 data-en="Not a Substitute for Professional Legal Advice" data-hi="पेशेवर कानूनी सलाह का विकल्प नहीं">Not a Substitute for Professional Legal Advice</h3>
+                    <p data-en="For complex legal matters, we recommend consulting with a qualified lawyer. SamvidhanAI cannot represent you in court or provide attorney-client privileged communication." data-hi="जटिल कानूनी मामलों के लिए, हम एक योग्य वकील से परामर्श करने की सलाह देते हैं। सम्विधानAI अदालत में आपका प्रतिनिधित्व नहीं कर सकता या वकील-ग्राहक विशेषाधिकार प्राप्त संचार प्रदान नहीं कर सकता।">
+                        For complex legal matters, we recommend consulting with a qualified lawyer. SamvidhanAI cannot represent you in court or provide attorney-client privileged communication.
+                    </p>
+                </div>
+                <div class="consent-section">
+                    <h3 data-en="Data Usage & Privacy" data-hi="डेटा उपयोग और गोपनीयता">Data Usage & Privacy</h3>
+                    <p data-en="Your consultation data is stored securely on Indian servers. We use this data to improve our AI models and provide better service. Your data will never be sold to third parties." data-hi="आपका परामर्श डेटा भारतीय सर्वर पर सुरक्षित रूप से संग्रहीत किया जाता है। हम इस डेटा का उपयोग अपने AI मॉडल में सुधार और बेहतर सेवा प्रदान करने के लिए करते हैं। आपका डेटा कभी भी तीसरे पक्ष को बेचा नहीं जाएगा।">
+                        Your consultation data is stored securely on Indian servers. We use this data to improve our AI models and provide better service. Your data will never be sold to third parties.
+                    </p>
+                </div>
+                <div class="consent-section">
+                    <h3 data-en="User Responsibilities" data-hi="उपयोगकर्ता जिम्मेदारियां">User Responsibilities</h3>
+                    <ul>
+                        <li data-en="You agree to provide accurate information" data-hi="आप सटीक जानकारी प्रदान करने के लिए सहमत हैं">You agree to provide accurate information</li>
+                        <li data-en="You will not use the service for illegal purposes" data-hi="आप इस सेवा का उपयोग अवैध उद्देश्यों के लिए नहीं करेंगे">You will not use the service for illegal purposes</li>
+                        <li data-en="You understand AI limitations and will verify critical information" data-hi="आप AI सीमाओं को समझते हैं और महत्वपूर्ण जानकारी सत्यापित करेंगे">You understand AI limitations and will verify critical information</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="consent-actions">
+                <label class="consent-checkbox">
+                    <input type="checkbox" id="consentCheckbox">
+                    <span data-en="I have read and agree to the Terms of Service and Privacy Policy" data-hi="मैंने सेवा की शर्तें और गोपनीयता नीति पढ़ी और उनसे सहमत हूं">I have read and agree to the Terms of Service and Privacy Policy</span>
+                </label>
+                <div class="consent-buttons">
+                    <button class="btn btn-outline" id="decline-consent" data-en="Decline" data-hi="अस्वीकार करें">Decline</button>
+                    <button class="btn btn-primary" id="accept-consent" disabled data-en="I Agree" data-hi="मैं सहमत हूं">I Agree</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer">
+        <div class="toast" id="toast">
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

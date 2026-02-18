@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - SamvidhanAI</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Government Header Strip -->
+    <div class="govt-strip">
+        <div class="container">
+            <div class="govt-info">
+                <span class="govt-logo"><i class="fas fa-landmark"></i></span>
+                <span class="govt-text" data-en="Government of India | Ministry of Law and Justice" data-hi="भारत सरकार | विधि और न्याय मंत्रालय">Government of India | Ministry of Law and Justice</span>
+            </div>
+            <div class="govt-links">
+                <div class="language-toggle">
+                    <button id="lang-en" class="lang-btn active">English</button>
+                    <button id="lang-hi" class="lang-btn">हिन्दी</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>SamvidhanAI</span>
+                </div>
+                <button class="sidebar-close" id="sidebarClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#consult" class="nav-item active" data-section="consult">
+                    <i class="fas fa-comments"></i>
+                    <span data-en="AI Consultation" data-hi="AI परामर्श">AI Consultation</span>
+                </a>
+                <a href="#history" class="nav-item" data-section="history">
+                    <i class="fas fa-history"></i>
+                    <span data-en="Chat History" data-hi="चैट इतिहास">Chat History</span>
+                </a>
+                <a href="#lawyers" class="nav-item" data-section="lawyers">
+                    <i class="fas fa-user-tie"></i>
+                    <span data-en="Connect Lawyers" data-hi="वकीलों से जुड़ें">Connect Lawyers</span>
+                </a>
+                <a href="#premium" class="nav-item" data-section="premium" id="premiumNavItem">
+                    <i class="fas fa-crown"></i>
+                    <span data-en="Premium" data-hi="प्रीमियम">Premium</span>
+                </a>
+                <a href="#settings" class="nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span data-en="Settings" data-hi="सेटिंग्स">Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <div class="user-details">
+                        <span class="user-name" id="userName">User</span>
+                        <span class="user-plan" id="userPlan">Free Plan</span>
+                    </div>
+                </div>
+                <button class="btn btn-outline btn-sm" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span data-en="Logout" data-hi="लॉगआउट">Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2 class="page-title" data-en="AI Legal Consultation" data-hi="AI कानूनी परामर्श">AI Legal Consultation</h2>
+                <div class="top-actions">
+                    <button class="icon-btn" id="notificationBtn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">0</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Consultation Section -->
+                <section class="section active" id="consult-section">
+                    <!-- Mode Selector -->
+                    <div class="mode-selector">
+                        <button class="mode-btn active" data-mode="text">
+                            <i class="fas fa-keyboard"></i>
+                            <span data-en="Text" data-hi="पाठ">Text</span>
+                        </button>
+                        <button class="mode-btn" data-mode="voice">
+                            <i class="fas fa-microphone"></i>
+                            <span data-en="Voice" data-hi="आवाज">Voice</span>
+                        </button>
+                        <button class="mode-btn" data-mode="visual">
+                            <i class="fas fa-camera"></i>
+                            <span data-en="Visual" data-hi="दृश्य">Visual</span>
+                        </button>
+                    </div>
+
+                    <!-- Chat Container -->
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="welcome-message">
+                                <div class="ai-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="welcome-content">
+                                    <h3 data-en="Welcome to SamvidhanAI" data-hi="सम्विधानAI में आपका स्वागत है">Welcome to SamvidhanAI</h3>
+                                    <p data-en="I'm your AI legal assistant trained on Indian law. How can I help you today?" data-hi="मैं भारतीय कानून पर प्रशिक्षित आपका AI कानूनी सहायक हूं। मैं आज आपकी कैसे मदद कर सकता हूं?">I'm your AI legal assistant trained on Indian law. How can I help you today?</p>
+                                    <div class="suggestion-chips">
+                                        <button class="chip" data-query="What are my rights as a tenant?" data-hi-query="किरायेदार के रूप में मेरे अधिकार क्या हैं?">
+                                            <span data-en="Tenant Rights" data-hi="किरायेदार अधिकार">Tenant Rights</span>
+                                        </button>
+                                        <button class="chip" data-query="How to file an FIR?" data-hi-query="FIR कैसे दर्ज करें?">
+                                            <span data-en="Filing FIR" data-hi="FIR दर्ज करना">Filing FIR</span>
+                                        </button>
+                                        <button class="chip" data-query="What is the process for divorce?" data-hi-query="तलाक की प्रक्रिया क्या है?">
+                                            <span data-en="Divorce Process" data-hi="तलाक प्रक्रिया">Divorce Process</span>
+                                        </button>
+                                        <button class="chip" data-query="Consumer protection rights" data-hi-query="उपभोक्ता संरक्षण अधिकार">
+                                            <span data-en="Consumer Rights" data-hi="उपभोक्ता अधिकार">Consumer Rights</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Input Area -->
+                        <div class="chat-input-area">
+                            <!-- Text Input -->
+                            <div class="input-mode active" id="text-input">
+                                <div class="input-wrapper">
+                                    <textarea id="textQuery" placeholder="Type your legal question here..." rows="1"></textarea>
+                                    <button class="send-btn" id="sendTextBtn">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Voice Input -->
+                            <div class="input-mode" id="voice-input">
+                                <div class="voice-recorder">
+                                    <div class="voice-status" id="voiceStatus">
+                                        <i class="fas fa-microphone"></i>
+                                        <span data-en="Tap to start recording" data-hi="रिकॉर्डिंग शुरू करने के लिए टैप करें">Tap to start recording</span>
+                                    </div>
+                                    <button class="voice-btn" id="voiceRecordBtn">
+                                        <i class="fas fa-microphone"></i>
+                                    </button>
+                                    <div class="voice-transcript" id="voiceTranscript"></div>
+                                    <div class="voice-wave" id="voiceWave"></div>
+                                </div>
+                            </div>
+
+                            <!-- Visual Input -->
+                            <div class="input-mode" id="visual-input">
+                                <div class="visual-uploader">
+                                    <div class="upload-zone" id="uploadZone">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <p data-en="Drag & drop or click to upload" data-hi="खींचें और छोड़ें या अपलोड करने के लिए क्लिक करें">Drag & drop or click to upload</p>
+                                        <span data-en="Supports: JPG, PNG, PDF (Max 10MB)" data-hi="समर्थित: JPG, PNG, PDF (अधिकतम 10MB)">Supports: JPG, PNG, PDF (Max 10MB)</span>
+                                        <input type="file" id="fileInput" accept="image/*,.pdf" hidden>
+                                    </div>
+                                    <div class="upload-preview" id="uploadPreview"></div>
+                                    <div class="visual-query">
+                                        <input type="text" id="visualQuery" placeholder="Describe what you want to know about this document...">
+                                        <button class="send-btn" id="sendVisualBtn">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ad Banner (Free Users) -->
+                    <div class="ad-banner" id="adBanner">
+                        <div class="ad-content">
+                            <i class="fas fa-crown"></i>
+                            <span data-en="Upgrade to Premium for ad-free experience and detailed case citations" data-hi="विज्ञापन-मुक्त अनुभव और विस्तृत मामला उद्धरणों के लिए प्रीमियम में अपग्रेड करें">Upgrade to Premium for ad-free experience and detailed case citations</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm" id="upgradeAdBtn" data-en="Upgrade" data-hi="अपग्रेड">Upgrade</button>
+                    </div>
+                </section>
+
+                <!-- Chat History Section -->
+                <section class="section" id="history-section">
+                    <div class="section-header">
+                        <h3 data-en="Your Consultation History" data-hi="आपका परामर्श इतिहास">Your Consultation History</h3>
+                        <button class="btn btn-outline btn-sm" id="clearHistoryBtn">
+                            <i class="fas fa-trash"></i>
+                            <span data-en="Clear All" data-hi="सभी साफ करें">Clear All</span>
+                        </button>
+                    </div>
+                    <div class="history-list" id="historyList">
+                        <div class="empty-state">
+                            <i class="fas fa-history"></i>
+                            <p data-en="No consultation history yet" data-hi="अभी तक कोई परामर्श इतिहास नहीं">No consultation history yet</p>
+                            <span data-en="Your past consultations will appear here" data-hi="आपके पिछले परामर्श यहां दिखाई देंगे">Your past consultations will appear here</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Lawyers Section -->
+                <section class="section" id="lawyers-section">
+                    <div class="section-header">
+                        <h3 data-en="Connect with Verified Lawyers" data-hi="सत्यापित वकीलों से जुड़ें">Connect with Verified Lawyers</h3>
+                    </div>
+                    <div class="premium-gate" id="lawyersGate">
+                        <div class="gate-content">
+                            <i class="fas fa-crown"></i>
+                            <h4 data-en="Premium Feature" data-hi="प्रीमियम विशेषता">Premium Feature</h4>
+                            <p data-en="Upgrade to Premium to connect with verified lawyers for detailed consultation" data-hi="विस्तृत परामर्श के लिए सत्यापित वकीलों से जुड़ने के लिए प्रीमियम में अपग्रेड करें">Upgrade to Premium to connect with verified lawyers for detailed consultation</p>
+                            <button class="btn btn-primary" id="upgradeLawyerBtn">
+                                <i class="fas fa-arrow-up"></i>
+                                <span data-en="Upgrade to Premium" data-hi="प्रीमियम में अपग्रेड करें">Upgrade to Premium</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="lawyers-grid" id="lawyersGrid" style="display: none;">
+                        <!-- Lawyers will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Premium Section -->
+                <section class="section" id="premium-section">
+                    <div class="premium-hero">
+                        <div class="premium-badge">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 data-en="Upgrade to SamvidhanAI Premium" data-hi="सम्विधानAI प्रीमियम में अपग्रेड करें">Upgrade to SamvidhanAI Premium</h3>
+                        <p data-en="Unlock the full potential of AI-powered legal assistance" data-hi="AI-संचालित कानूनी सहायता की पूरी क्षमता अनलॉक करें">Unlock the full potential of AI-powered legal assistance</p>
+                    </div>
+                    <div class="premium-features">
+                        <div class="premium-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Unlimited AI consultations" data-hi="असीमित AI परामर्श">Unlimited AI consultations</span>
+                        </div>
+                        <div class="premium-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Detailed case law citations" data-hi="विस्तृत मामला कानून उद्धरण">Detailed case law citations</span>
+                        </div>
+                        <div class="premium-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Connect with verified lawyers" data-hi="सत्यापित वकीलों से जुड़ें">Connect with verified lawyers</span>
+                        </div>
+                        <div class="premium-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Ad-free experience" data-hi="विज्ञापन-मुक्त अनुभव">Ad-free experience</span>
+                        </div>
+                        <div class="premium-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Unlimited chat history" data-hi="असीमित चैट इतिहास">Unlimited chat history</span>
+                        </div>
+                        <div class="premium-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Priority support" data-hi="प्राथमिकता समर्थन">Priority support</span>
+                        </div>
+                    </div>
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h4 data-en="Monthly" data-hi="मासिक">Monthly</h4>
+                            <div class="price">
+                                <span class="currency">₹</span>
+                                <span class="amount">299</span>
+                                <span class="period" data-en="/month" data-hi="/माह">/month</span>
+                            </div>
+                            <button class="btn btn-outline btn-block" id="monthlyPlanBtn" data-en="Select" data-hi="चुनें">Select</button>
+                        </div>
+                        <div class="pricing-card featured">
+                            <div class="badge" data-en="Best Value" data-hi="सर्वश्रेष्ठ मूल्य">Best Value</div>
+                            <h4 data-en="Yearly" data-hi="वार्षिक">Yearly</h4>
+                            <div class="price">
+                                <span class="currency">₹</span>
+                                <span class="amount">2,999</span>
+                                <span class="period" data-en="/year" data-hi="/वर्ष">/year</span>
+                            </div>
+                            <p class="save-text" data-en="Save 16%" data-hi="16% बचाएं">Save 16%</p>
+                            <button class="btn btn-primary btn-block" id="yearlyPlanBtn" data-en="Select" data-hi="चुनें">Select</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section class="section" id="settings-section">
+                    <div class="settings-tabs">
+                        <button class="settings-tab active" data-tab="profile">
+                            <i class="fas fa-user"></i>
+                            <span data-en="Profile" data-hi="प्रोफाइल">Profile</span>
+                        </button>
+                        <button class="settings-tab" data-tab="security">
+                            <i class="fas fa-shield-alt"></i>
+                            <span data-en="Security" data-hi="सुरक्षा">Security</span>
+                        </button>
+                        <button class="settings-tab" data-tab="preferences">
+                            <i class="fas fa-sliders-h"></i>
+                            <span data-en="Preferences" data-hi="प्राथमिकताएं">Preferences</span>
+                        </button>
+                        <button class="settings-tab" data-tab="danger">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span data-en="Danger Zone" data-hi="खतरा क्षेत्र">Danger Zone</span>
+                        </button>
+                    </div>
+
+                    <div class="settings-content">
+                        <!-- Profile Settings -->
+                        <div class="settings-panel active" id="profile-panel">
+                            <h4 data-en="Profile Information" data-hi="प्रोफाइल जानकारी">Profile Information</h4>
+                            <form id="profileForm">
+                                <div class="form-group">
+                                    <label for="profileName" data-en="Full Name" data-hi="पूरा नाम">Full Name</label>
+                                    <input type="text" id="profileName" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profileEmail" data-en="Email" data-hi="ईमेल">Email</label>
+                                    <input type="email" id="profileEmail" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profilePhone" data-en="Phone Number" data-hi="फोन नंबर">Phone Number</label>
+                                    <input type="tel" id="profilePhone" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profilePlan" data-en="Current Plan" data-hi="वर्तमान योजना">Current Plan</label>
+                                    <input type="text" id="profilePlan" readonly>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Security Settings -->
+                        <div class="settings-panel" id="security-panel">
+                            <h4 data-en="Change Password" data-hi="पासवर्ड बदलें">Change Password</h4>
+                            <form id="passwordForm">
+                                <div class="form-group">
+                                    <label for="currentPassword" data-en="Current Password" data-hi="वर्तमान पासवर्ड">Current Password</label>
+                                    <input type="password" id="currentPassword" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword" data-en="New Password" data-hi="नया पासवर्ड">New Password</label>
+                                    <input type="password" id="newPassword" minlength="6" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword" data-en="Confirm New Password" data-hi="नया पासवर्ड पुष्टि करें">Confirm New Password</label>
+                                    <input type="password" id="confirmPassword" minlength="6" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-key"></i>
+                                    <span data-en="Change Password" data-hi="पासवर्ड बदलें">Change Password</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Preferences -->
+                        <div class="settings-panel" id="preferences-panel">
+                            <h4 data-en="Language Preference" data-hi="भाषा प्राथमिकता">Language Preference</h4>
+                            <div class="preference-item">
+                                <span data-en="Preferred Language" data-hi="पसंदीदा भाषा">Preferred Language</span>
+                                <div class="language-selector">
+                                    <button class="lang-option active" data-lang="en">English</button>
+                                    <button class="lang-option" data-lang="hi">हिन्दी</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Danger Zone -->
+                        <div class="settings-panel" id="danger-panel">
+                            <h4 data-en="Account Deletion" data-hi="खाता हटाना">Account Deletion</h4>
+                            <div class="danger-notice">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <p data-en="Warning: This action cannot be undone. Your account deletion request will be reviewed by our admin team." data-hi="चेतावनी: यह क्रिया पूर्ववत नहीं की जा सकती। आपका खाता हटाने का अनुरोध हमारी एडमिन टीम द्वारा समीक्षा किया जाएगा।">
+                                    Warning: This action cannot be undone. Your account deletion request will be reviewed by our admin team.
+                                </p>
+                            </div>
+                            <button class="btn btn-danger" id="deleteAccountBtn">
+                                <i class="fas fa-trash-alt"></i>
+                                <span data-en="Request Account Deletion" data-hi="खाता हटाने का अनुरोध">Request Account Deletion</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Lawyer Chat Modal -->
+    <div class="modal" id="lawyerChatModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <div class="lawyer-chat-header">
+                    <div class="lawyer-avatar" id="chatLawyerAvatar">L</div>
+                    <div class="lawyer-info">
+                        <h4 id="chatLawyerName">Lawyer Name</h4>
+                        <span class="status online" data-en="Online" data-hi="ऑनलाइन">Online</span>
+                    </div>
+                </div>
+                <button class="modal-close" id="closeLawyerChat">&times;</button>
+            </div>
+            <div class="lawyer-chat-messages" id="lawyerChatMessages"></div>
+            <div class="lawyer-chat-input">
+                <input type="text" id="lawyerMessageInput" placeholder="Type your message...">
+                <button id="sendLawyerMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer">
+        <div class="toast" id="toast">
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
