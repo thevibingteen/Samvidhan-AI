@@ -1,4 +1,4 @@
-# SamvidhanAI - Origin Midnight
+# SamvidhanAI - (Origin Midnight)
 
 ## India's Sovereign AI Legal Assistant Platform
 
